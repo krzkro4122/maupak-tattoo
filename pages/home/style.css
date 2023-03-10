@@ -1,0 +1,76 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --g1: rgb(200, 200, 0);
+    --g0: rgb(200, 100, 0);
+    --g2: rgb(200, 100, 100);
+    --g2: rgb(200, 0, 100);
+    --g3: rgb(200, 0, 200);
+    --g4: rgb(100, 100, 200);
+}
+
+body {
+    background-color: var(--bg-color);
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+main {}
+
+header {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 2vmin; */
+    border-bottom: 1px solid white;
+}
+
+#landing {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#landing>div>a {
+    font-size: 8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+}
+
+#landing>div>a:hover {
+    display: block;
+    transform: scale(1.02, 1.02);
+}
+
+#landing>div>a:active {
+    opacity: 70%;
+}
+
+#landing>div:nth-child(1)>a:hover {
+    color: var(--g0);
+}
+
+#landing>div:nth-child(2)>a:hover {
+    color: var(--g1);
+}
+
+#landing>div:nth-child(3)>a:hover {
+    color: var(--g2);
+}
+
+#landing>div:nth-child(4)>a:hover {
+    color: var(--g3)
+}
+
+#landing>div:nth-child(5)>a:hover {
+    color: var(--g4);
+}
