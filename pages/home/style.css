@@ -22,8 +22,6 @@ body {
     place-items: center;
 }
 
-main {}
-
 header {
     visibility: hidden;
     display: flex;
@@ -38,7 +36,13 @@ header {
     flex-wrap: nowrap;
 }
 
-#landing>div>a {
+/* Make all links, apart from the currently hovered one, more opaque/blurry */
+#landing:hover .landingLink>a:not(:hover) {
+    opacity: 40%;
+    filter: blur(0.25rem);
+}
+
+.landingLink>a {
     font-size: 8rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -46,31 +50,27 @@ header {
     color: white;
 }
 
-#landing>div>a:hover {
+.landingLink>a:hover {
     display: block;
     transform: scale(1.02, 1.02);
 }
 
-#landing>div>a:active {
-    opacity: 70%;
-}
-
-#landing>div:nth-child(1)>a:hover {
+.landingLink:nth-child(1)>a:hover {
     color: var(--g0);
 }
 
-#landing>div:nth-child(2)>a:hover {
+.landingLink:nth-child(2)>a:hover {
     color: var(--g1);
 }
 
-#landing>div:nth-child(3)>a:hover {
+.landingLink:nth-child(3)>a:hover {
     color: var(--g2);
 }
 
-#landing>div:nth-child(4)>a:hover {
+.landingLink:nth-child(4)>a:hover {
     color: var(--g3)
 }
 
-#landing>div:nth-child(5)>a:hover {
+.landingLink:nth-child(5)>a:hover {
     color: var(--g4);
 }
